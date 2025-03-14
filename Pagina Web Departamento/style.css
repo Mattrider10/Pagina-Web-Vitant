@@ -1,0 +1,123 @@
+body { 
+    background: linear-gradient(to bottom, #3B0C53, white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.5);
+}
+
+.imagen-container {
+    width: 300px;
+    overflow: hidden;
+    display: inline-block;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.imagen-container img {
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.imagen-container:hover img {
+    transform: scale(1.5);
+}
+
+h1 {
+    font-size: 60px;
+    font-style: bold;
+}
+
+h2 {
+    font-size: 55px;
+    font-style: bold;
+    color: #EB4953;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+p {
+    font-size: 30px;
+    color: white;
+}
+
+li {
+    font-size: 30px;
+    color: white;
+}
+
+.text-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
+    width: 50%;
+    max-width: 5000px;
+    padding: 20px;
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
